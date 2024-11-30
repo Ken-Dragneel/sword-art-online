@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-size: 62.5%;
+    color: #fff;
+    background-color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-top__bg {
+    width: 100%;
+    height: 95px;
+    background-image: url("top.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.5));
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 95px;
+    z-index: 1000;
+    background-image: url("top_pc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+
+.navbar li a {
+    display: block;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar li::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 30px;
+    background-image: url('icon.png');
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+
+.navbar li:hover::after {
+    filter: hue-rotate(256deg);
+}
+
+.container {
+
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.imagecontainer {
+    position: relative;
+    height: calc(100% - 140px);
+    overflow: hidden;
+}
+
+.mv-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+
+.chara {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+    padding: 40px 0;
+}
+
+.chara-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* You can keep or adjust this */
+    height: 100%;
+}
+
+.chara-head {
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.chara-head img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chara-main__name {
+    color: #000;
+    background-color: #fff;
+    width: 33%;
+    text-align: center;
+    line-height: 1;
+    padding: 2.6041666667vw 0 1.953125vw;
+    transform: skew(-20deg);
+    position: relative;
+    left: 33%;
+    font-size: 16px;
+}
+
+.chara-main__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chara-main__img img {
+    max-width: 80%;
+    /* Ensure the image doesn't take up full width, adjust based on design */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Ensures the image fits within the box */
+}
+
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: " " !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: " " !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff;
+    /* Arrow color */
+}
+
+
+.chara-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chara-list__item {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #fff;
+    background-color: #000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chara-list__img img {
+    width: 100%;
+    /* Responsive thumbnail images */
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the thumbnail area without distortion */
+}
+
+.chara-bg__item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Maintain the background image fit */
+}
+
+/* Glowing effect - SAO Technological Theme */
+.js-current {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.8);
+    /* Neon cyan glow */
+    transition: box-shadow 0.3s ease;
+}
+
+/*modal css*/
+
+.modal {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background */
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+.modal-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    /* White background for the modal content */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+}
+
+.modal-yt {
+    width: 80%;
+    /* Responsive width */
+    max-width: 800px;
+    /* Maximum width */
+}
+
+.modal-yt iframe {
+    width: 100%;
+    /* Full width */
+    height: 450px;
+    /* Fixed height for the video */
+    border: none;
+    /* Remove border */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    /* Positioning the close button */
+    right: 10px;
+    /* Positioning the close button */
+    width: 30px;
+    /* Size of the close button */
+    cursor: pointer;
+    /* Pointer on hover */
+}
+
+.modal-close img {
+    width: 100%;
+    /* Make close button image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.movie {
+    /* display: flex; */
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.movie-head {
+    margin-left: -20px;
+    padding-bottom: 10px;
+}
+
+.movie-head img {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+}
+
+
+.movie-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* You can keep or adjust this */
+    height: 100%;
+}
+
+.movie-list {
+    margin-top: 10px;
+    /* border: 2px solid white; */
+    width: 100%;
+}
+
+.movie-list__wrapper {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 7px solid green; */
+    /* width: 90%; */
+}
+
+.movie-list__link img {
+    width: 100%;
+    max-width: 600px;
+    filter: contrast(0.5);
+}
+
+.movie-list__link p {
+    background-color: black;
+    font-size: 20px;
+    width: 50%;
+    border: 2px solid green;
+    position: absolute;
+    /* Position the title absolutely */
+    bottom: 10px;
+    /* Space from the bottom of the container */
+    left: 25%;
+    /* Space from the left side of the container */
+}
+
+.movie-list__item {
+    flex-shrink: 0;
+    width: 400px;
+    /* Adjust width for responsiveness */
+}
+
+.movie-list__link {
+    /* border: 1px solid red; */
+    transition: transform 0.3s;
+    /* Smooth transition */
+}
+
+.movie-list__link:hover {
+    transform: scale(1.05);
+    /* Hover effect */
+}
+
+
+.movie-list {
+    position: relative;
+}
+
+.movie-list__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    /* Set the width of the play button */
+    height: 60px;
+    /* Set the height of the play button */
+    background-image: url(play.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    filter: drop-shadow(0 0 3.90625px rgba(0, 0, 0, .8));
+
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: " ";
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("bottom_pc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, .5));
+}
+/* Mobile first approach */
+@media (max-width: 425px) {
+    .header-top__bg {
+        background: none;
+    }
+    .mv-bg {
+        object-fit: contain;
+    }
+    .navbar li a{
+        font-size: 15px;
+    }
+    .header{
+        height: 70px;
+    }
+
+    .chara-main__arrow img {
+        height: 50px;
+    }
+ 
+    .movie-list__link p {
+        width: 100%;
+        left: -1%;
+        font-size: 15px;
+        bottom: 0px;
+    }
+ 
+    .chara-main__arrows img {
+        height: 50px;
+        margin-right: 110px;
+        margin-left: 60px;
+    }
+ 
+    footer {
+        height: 15px;
+    }
+}
+ 
+/* Tablet (768px and above) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .movie-list__link p {
+        width: 83%;
+        left: 10%;
+    }
+ 
+    .chara-main__arrows img {
+        height: 100px;
+    }
+    .header-top__bg{
+        background: none;
+    }
+}
+ 
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .chara-main__arrow img {
+        height: 100px;
+    }
+ 
+    .chara-main__arrows img {
+        height: 100px;
+    }
+}
+ 
+/* Large screens (1440px and above) */
+@media (min-width: 1440px) and (max-width: 2560px) {
+    .chara-main__arrow img {
+        height: 142px;
+    }
+}
+ 
+/* Extra large screens (2560px and above) */
+@media (min-width: 2560px) {
+    .chara-main__arrow img {
+        height: 142px;
+    }
+}

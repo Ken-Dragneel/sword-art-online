@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <title>Sword Art Online</title>
+</head>
+<body>
+    <style>
+            .text {
+            font-size: 5rem;
+            white-space: nowrap; 
+            overflow: hidden;
+            border-right: 4px solid #00AFFF; 
+            animation: blink 0.7s step-end infinite; 
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+    <div class="header-top__bg"></div>
+    <div class="header">
+        <div class="navbar">
+            <ul>
+               <li><a href="#Home" class="active">Home</a></li>
+                <li><a href="#chara">Characters</a></li>
+                <li><a href="#movie">Movies</a></li>
+                <!-- <li><a href="#About Us">About Us</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="imagecontainer" id="Home">
+        <video style="object-fit: cover;" class="mv-bg" id="video" webkit-playsinline playsinline muted autoplay loop>
+            <source src="saovs_movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="text"><span id="typed-text"></span></div>
+        </div>
+    </div>
+
+<!--characters-->
+    <div class="chara" id="chara">
+        <div class="chara-inner">
+            <h2 class="chara-head">
+                <img src="h2_pc.png" alt="CHARACTER">
+            </h2>
+
+            <div class="chara-content">
+                <div class="swiper chara-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide chara-main__item">
+                            <div class="chara-main__inner">
+                                <p class="chara-main__img">
+                                    <img src="kirito-main.png" alt="Kirito">
+                                </p>
+                                <a href="#" class="chara-main__movie" data-url="aRGDFt97668">
+                                    <img src="../assets/img/chara/kirito/movie.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="chara-main__name">
+                                <h1 class="chara-main__name--main">Kirito</h1>
+                                <p class="chara-main__name--cv">CV:Yoshitsugu Matsuoka</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide chara-main__item">
+                            <div class="chara-main__inner">
+                                <p class="chara-main__img">
+                                    <img src="asuna-main.png" alt="Asuna">
+                                </p>
+                                <a href="#" class="chara-main__movie" data-url="qtqW7wyhrFI">
+                                    <img src="../assets/img/chara/asuna/movie.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="chara-main__name">
+                                <h1 class="chara-main__name--main">Asuna</h1>
+                                <p class="chara-main__name--cv">CV:Haruka Tomatsu</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide chara-main__item">
+                            <div class="chara-main__inner">
+                                <p class="chara-main__img">
+                                    <img src="leafa-main.png" alt="Leafa">
+                                </p>
+                                <a href="#" class="chara-main__movie" data-url="HEsO2xOlsXE">
+                                    <img src="../assets/img/chara/leafa/movie.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="chara-main__name">
+                                <h1 class="chara-main__name--main">Leafa</h1>
+                                <p class="chara-main__name--cv">CV:Ayana Taketatsu</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide chara-main__item">
+                            <div class="chara-main__inner">
+                                <p class="chara-main__img">
+                                    <img src="lisabeth-main.png" alt="Lisbeth">
+                                </p>
+                                <a href="#" class="chara-main__movie" data-url="oA_-NGnlpbk">
+                                    <img src="../assets/img/chara/lisbeth/movie.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="chara-main__name">
+                                <h1 class="chara-main__name--main">Lisbeth</h1>
+                                <p class="chara-main__name--cv">CV:Ayahi Takagaki</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide chara-main__item">
+                            <div class="chara-main__inner">
+                                <p class="chara-main__img">
+                                    <img src="silica.png" alt="Silica">
+                                </p>
+                                <a href="#" class="chara-main__movie" data-url="aqsdA7dIBZU">
+                                    <img src="../assets/img/chara/silica/movie.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="chara-main__name">
+                                <h1 class="chara-main__name--main">Silica</h1>
+                                <p class="chara-main__name--cv">CV:Rina Hidaka</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev chara-main__arrow">
+                        <img src="arrow.png" alt="Prev" style="transform: rotate(180deg); margin-left: 70px;">
+                    </div>
+                                     
+                    <div class="swiper-button-next chara-main__arrow">
+                        <img src="arrow.png" alt="Next" style="margin-right: 38px;">
+                    </div>
+                </div>
+
+                <ul class="chara-list">
+                    <li class="chara-list__item js-current" data-id="0">
+                        <p class="chara-list__img"><img src="thumb_1.jpg" alt=""></p>
+                    </li>
+                    <li class="chara-list__item" data-id="1">
+                        <p class="chara-list__img"><img src="thumb_2.jpg" alt=""></p>
+                    </li>
+                    <li class="chara-list__item" data-id="2">
+                        <p class="chara-list__img"><img src="thumb_3.jpg" alt=""></p>
+                    </li>
+                    <li class="chara-list__item" data-id="3">
+                        <p class="chara-list__img"><img src="thumb_4.jpg" alt=""></p>
+                    </li>
+                    <li class="chara-list__item" data-id="4">
+                        <p class="chara-list__img"><img src="thumb_5.jpg" alt=""></p>
+                    </li>
+                    <li class="chara-list__item" data-id="4">
+                        <p class="chara-list__img"><img src="thumb_6.jpg" alt=""></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal Structure -->
+<div class="modal">
+    <div class="modal-bg"></div>
+    <div class="modal-yt modal-item">
+        <a href="#" class="modal-close"><img src="close.png" alt="Close"></a>
+        <iframe width="853px" height="480px" src=" " title="Sword Art Online - Opening 1 [4K 60FPS | Creditless | CC]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="yt"></iframe>
+
+    </div>
+</div>
+        
+     
+     <section class="movie" id="movie">
+        <div class="movie-inner">
+            <h2 class="movie-head">
+                <img src="h2.png" alt="MOVIE">
+            </h2>
+            <div class="movie-list">
+                <div class="swiper-container movie-list__wrapper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="NZCJVyEKrgs">
+                                <img src="thumb_04.jpg"  alt="Movie Thumbnail">
+                                <p class="movie-list__title">Sword Art Online Variant Showdown Original Opening Movie</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="5f8z7ym8u3o">
+                                <img src="thumb_01.jpg" alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="5f8z7ym8u3o">
+                                <img src="thumb_04.jpg"  alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="5f8z7ym8u3o">
+                                <img src="thumb_01.jpg" alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <!-- Add more movie thumbnails as needed -->
+                    </div>
+                    <div class="swiper-button-prev chara-main__arrows">
+                        <img src="arrow.png" alt="Prev" style="transform: rotate(180deg); margin-left: 70px;">
+                    </div>
+                                     
+                    <div class="swiper-button-next chara-main__arrows">
+                        <img src="arrow.png" alt="Next" style="margin-right: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
+    
+    <footer>
+    </footer>
+    <p>Made By Ken</p>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
